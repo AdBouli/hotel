@@ -50,6 +50,5 @@ Vous pouvez vous connecter à l'application avec les identifiants suivant:
 
 Contact
 -------
-Adrien B.
-<adrien.boulineau@laposte.net>
+Adrien B. <adrien.boulineau@laposte.net>
 
