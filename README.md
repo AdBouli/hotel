@@ -36,10 +36,14 @@ Pour supprimer toutes les données:
 Connection
 ----------
 Vous pouvez vous connecter à l'application avec les identifiants suivant:
+
 - 'admin'
 - 'mdp'
+
 > **Note:** Les utilisateurs 'toto' et 'tata' présent dans les données de tests ont également pour mot de passe 'mdp'.
 
 Contact
 -------
-Adrien <adrien.boulineau@laposte.net>
+Adrien B.
+<adrien.boulineau@laposte.net>
+
