@@ -12,9 +12,10 @@ Installation
 Décompressez l'archive.
 Placer le dossier à la racine de votre serveur web.
 Exécuter dans l'ordre les fichiers sql suivants dans votre SGBD:
- - 01_init_hotel.sql
- - 10_struct_hotel.sql
- - 15_triggers_hotel.sql
+
+ - 01_init_hotel.sql,
+ - 10_struct_hotel.sql,
+ - 15_triggers_hotel.sql.
 
 Configuration
 -------------
@@ -25,16 +26,19 @@ MySQL
 -----
 Les fichiers sql se situent dans le répertoire `datas/sql/`
 Vous pouvez également insérer des données tests:
- - 20_datas_test_hotel.sql
+
+ - 20_datas_test_hotel.sql.
+
 Pour supprimer toutes les données:
- - 09_clear_tables.sql
+
+ - 09_clear_tables.sql.
 
 Connection
 ----------
 Vous pouvez vous connecter à l'application avec les identifiants suivant:
 - 'admin'
 - 'mdp'
-Les utilisateurs 'toto' et 'tata' présent dans les données de tests ont également pour mot de passe 'mdp'.
+> **Note:** Les utilisateurs 'toto' et 'tata' présent dans les données de tests ont également pour mot de passe 'mdp'.
 
 Contact
 -------
