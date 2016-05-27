@@ -3,14 +3,18 @@ Gestion hôtelière
 
 Pré-requis
 ----------
-Serveur web apache 2 avec rewrite_module activé
-Serveur de base de donnée MySQL 5.5
-PHP 5.6 minimum
+Serveur web apache 2 avec rewrite_module activé,
+
+Serveur de base de donnée MySQL 5.5,
+
+PHP 5.6 minimum.
 
 Installation
 ------------
 Décompressez l'archive.
+
 Placer le dossier à la racine de votre serveur web.
+
 Exécuter dans l'ordre les fichiers sql suivants dans votre SGBD:
 
  - 01_init_hotel.sql,
@@ -20,11 +24,13 @@ Exécuter dans l'ordre les fichiers sql suivants dans votre SGBD:
 Configuration
 -------------
 Editer le fichier database.php (situé dans `conf/`),
-Renseignez l'adresse du serveur de base de donnée, l'identifiant MySQL et le mot de passe.
+
+Renseignez l'adresse du serveur de base de donnée, l'identifiant et le mot de passe MySQL .
 
 MySQL
 -----
 Les fichiers sql se situent dans le répertoire `datas/sql/`
+
 Vous pouvez également insérer des données tests:
 
  - 20_datas_test_hotel.sql.
