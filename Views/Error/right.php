@@ -1,0 +1,1 @@
+<p><strong>Erreur:</strong> Vous n'avez pas le droit d'accéder à ce contenu.</p>
