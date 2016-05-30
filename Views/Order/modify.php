@@ -4,7 +4,14 @@
 <div class="row">
 	<div class="col s10 offset-s1">
 		<div class="row">
-			<h5>Edition d'une commande</h5>
+			<div class="col s9">
+				<h5>Edition d'une commande</h5>
+			</div>
+			<div class="col s3">
+				<a href="<?= WEBROOT ?>order" class="btn waves-effect waves-light">
+					Fin d'édition
+				</a>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col s12">
@@ -55,31 +62,25 @@
 				<label for="searchProduct">Rechercher dans les produits :</label>
 				<input type="text" name="searchProduct" id="inputProduct">
 			</div>
-			<div class="input-field col s6" id="selectProduct">
+			<div class="input-field col s5" id="selectProduct">
 
 			</div>
-			<div class="input-field col s2">
+			<div class="input-field col s1">
 				<label for="quantity">Quantité :</label>
 				<input type="number" min="1" name="quantity" value="1">
 			</div>
-			<div class="input-field col s12">
-				<button class="btn waves-effect waves-light right" id="addLine">
-					Ajouter
+			<div class="input-field col s2">
+				<button class="btn-floating btn-large waves-effect waves-light left" id="addLine">
+					<i class="material-icons right">add</i>
 				</button>
 			</div>
-		</div>
-		<div class="input-field col s12">
-			<p class="right">
-				<input type="checkbox" name="paid" id="paid"/>
-				<label for="paid">Payée</label>
-			</p>
 		</div>
 		<div class="col s12">
 			<button class="btn waves-effect waves-light left red" id="delOrder">
 				Supprimer<i class="material-icons right">delete</i>
 			</button>
 			<button class="btn waves-effect waves-light right" id="upOrder">
-				Enregistrer<i class="material-icons right">send</i>
+				Commande payée<i class="material-icons right">euro_symbol</i>
 			</button>
 		</div>
 	</div>
@@ -131,6 +132,7 @@
 					}
 					upResumeOrder();
 					upTotalOrder();
+					$('input[name=quantity]').val(1);
 				} else
 				{
 					$('#resultAddLine').html('Echec de l\'ajout');
@@ -156,10 +158,10 @@
 			});
 		}
 
-		$('#upOrder').click(function ()
+		$('#paidOrder').click(function ()
 		{
 			var POST = {
-				paid: $('input[name=paid]').prop('checked')
+				paid: 1
 			};
 			$.ajax({
 				type: 'POST',
@@ -174,7 +176,7 @@
 				{
 					$('#result').html(result);					
 				}
-			})
+			});
 		});
 
 		$('#delOrder').click(function ()

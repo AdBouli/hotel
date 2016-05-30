@@ -21,7 +21,7 @@
 					<tbody>
 						<tr>
 							<td><?= $datas['id'] ?></td>
-							<td><?= $reservation['id'] ?></td>
+							<td><a href="<?= WEBROOT ?>reservation/view/<?= $reservation['id'] ?>"><?= $reservation['id'] ?></a></td>
 							<td><?= $room['num'] ?></td>
 							<td><?= $account['firstName'].' '.$account['name'] ?></td>
 							<td><?= $reservation['total'] ?></td>
@@ -68,6 +68,14 @@
 					<?php endforeach; ?>
 					</tbody>
 				</table>
+			</div>
+			<div class="col s12">				
+					<?php if ($datas['paid'] == 0) : ?>
+						<p class="red-text right">Non payée</p>
+					<?php else : ?>
+						<p class="green-text right">Payée</p>
+					<?php endif; ?>
+				</p>
 			</div>
 		</div>
 	</div>
