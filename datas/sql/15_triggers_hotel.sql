@@ -80,6 +80,9 @@ CREATE TRIGGER setReservationTotal_histo_AI_orders AFTER INSERT ON hotel_orders
 		DECLARE Reservation varchar(128);
 		-- Set new reservation total
 		UPDATE hotel_reservations SET total = total + NEW.total WHERE id = NEW.reservation_id;
+		IF (NEW.paid = 1) THEN 
+			UPDATE hotel_reservations SET paid = paid + NEW.total WHERE id = NEW.reservation_id;
+		END IF;
 		-- Historisation
 		SET User = (SELECT `username` FROM `hotel_users` WHERE `id` = NEW.user_id);
 		SET Reservation = (SELECT CONCAT(`dateStart`, ' - ', `dateEnd`, ' - ', `total`, ' - ', `paid`, ' - ', `user_id`, ' - ', `created`, ' - ', `modified`)
