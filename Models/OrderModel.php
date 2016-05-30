@@ -152,7 +152,7 @@ class OrderModel extends Model
     }
 
     /**
-     * @return Array
+     * @return Array order lines
      */
     public function getProductsOrders()
     {
@@ -160,7 +160,7 @@ class OrderModel extends Model
     }
 
     /**
-     * 
+     * @return Array results
      */
     public function getResume()
     {
@@ -171,7 +171,8 @@ class OrderModel extends Model
     }
 
     /**
-     * 
+     * @param Array elements to search
+     * @return Array results
      */
     public function search($elements)
     {
@@ -214,6 +215,10 @@ class OrderModel extends Model
         return $this->fetch($query);
     }
 
+    /**
+     * get logs for the current order
+     * @return array results
+     */
     public function getLogs()
     {
         return [

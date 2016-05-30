@@ -154,8 +154,9 @@ class UserModel extends Model
 	}
 
 	/**
-	 * 
-	 */
+     * @param Array elements to search
+     * @return Array results
+     */
 	public function search($elements)
 	{
 		extract($elements);
@@ -176,6 +177,10 @@ class UserModel extends Model
 		return $this->fetch($query);
 	}
 
+	/**
+     * get logs for the current user
+     * @return array results
+     */
     public function getLogs()
     {
         return [

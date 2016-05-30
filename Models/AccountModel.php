@@ -179,8 +179,8 @@ class AccountModel extends Model
     }
 
     /**
-     * @param Array
-     * @return Array
+     * @param Array elements to search
+     * @return Array results
      */
     public function search($elements)
     {
@@ -221,6 +221,11 @@ class AccountModel extends Model
         return $this->fetch($query);
     }
 
+
+    /**
+     * get logs for the current account
+     * @return array results
+     */
     public function getLogs()
     {
         return [

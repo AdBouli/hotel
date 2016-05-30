@@ -239,7 +239,8 @@ class ReservationModel extends Model
     }
 
     /**
-     * Get type name
+     * Get account
+     * @return array account datas
      */
     public function getAccount()
     {
@@ -248,7 +249,8 @@ class ReservationModel extends Model
     }
 
     /**
-     * Get type name
+     * Get account
+     * @return array room datas
      */
     public function getRoom()
     {
@@ -257,7 +259,8 @@ class ReservationModel extends Model
     }
 
     /**
-     * 
+     * get the last order
+     * @return array order datas
      */
     public function getLastOrder()
     {
@@ -265,7 +268,8 @@ class ReservationModel extends Model
     }
 
     /**
-     * 
+     * @param Array elements to search
+     * @return Array results
      */
     public function search($elements)
     {
@@ -345,13 +349,13 @@ class ReservationModel extends Model
     }
 
     /**
-     * 
+     * calc reservation total (with orders)
      */
     public function autoSetTotal()
     {
         $price = $this->getRoom()['price'];
-        $tmp = new DateTime($this->dateStart);
-        $price_reservation = floatval($tmp->diff(new DateTime($this->dateEnd))->format('%R%a'));
+        $date_start_obj = new DateTime($this->dateStart);
+        $price_reservation = floatval($date_start_obj->diff(new DateTime($this->dateEnd))->format('%R%a'));
         if ($price_reservation > 0)
         {
             $total_order = 0;
@@ -364,6 +368,10 @@ class ReservationModel extends Model
         }
     }
 
+    /**
+     * get logs for the current reservation
+     * @return array results
+     */
     public function getLogs()
     {
         return [

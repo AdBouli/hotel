@@ -134,6 +134,7 @@ class RoomModel extends Model
 
     /**
      * Get type name
+     * @return String room type name
      */
     public function gettypename()
     {
@@ -152,7 +153,8 @@ class RoomModel extends Model
     }
 
     /**
-     * 
+     * @param Array elements to search
+     * @return Array results
      */
     public function search($elements)
     {
@@ -188,6 +190,9 @@ class RoomModel extends Model
     /**
      * @param String Date start (yyyy-mm-dd)
      * @param String Date end (yyyy-mm-dd)
+     * @param Integer num of person
+     * @param Integer room type id
+     * @param Integer floor num
      * @return Array Free rooms list
      */
     public function getFreeRooms($dateA, $dateB, $person = 0, $type = 0, $floor = 0)
@@ -214,6 +219,10 @@ class RoomModel extends Model
         return $this->fetch($query.'ORDER BY `num` ASC;');
     }
 
+    /**
+     * get logs for the current reservation
+     * @return array results
+     */
     public function getLogs()
     {
         return [

@@ -161,7 +161,8 @@ class ProductorderModel extends Model
     }
 
     /**
-     * 
+     * @param Array elements to search
+     * @return Array results
      */
     public function search($elements)
     {
