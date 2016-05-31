@@ -51,6 +51,12 @@ Vous pouvez vous connecter à l'application avec les identifiants suivant:
 
 > **Note:** Les utilisateurs 'toto' et 'tata' présent dans les données de tests ont également pour mot de passe 'mdp'.
 
+Librairies externes
+-------------------
+
+- Materialize http://materializecss.com/
+- jQuery  https://jquery.com/
+
 Contact
 -------
 Adrien B. <adrien.boulineau@laposte.net>
