@@ -1,9 +1,12 @@
 Gestion hôtelière
 =================
 
+Arborescence
+------------
+
 Pré-requis
 ----------
-Serveur web apache 2 avec rewrite_module activé,
+Serveur web apache 2 avec **rewrite_module** activé,
 
 Serveur de base de donnée MySQL 5.5,
 

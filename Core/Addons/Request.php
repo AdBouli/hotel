@@ -14,8 +14,7 @@ trait Request
 	 */
 	public function connect($username, $password, $database)
 	{
-		$port = (!empty(_Port_)) ? ':'._Port_ : '';
-		$log = _Driver_.":host="._Hostname_.$port."; dbname=$database";
+		$log = _Driver_.":host="._Hostname_"; dbname=$database";
 		$this->PDO = new PDO($log, $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
 	}
 
