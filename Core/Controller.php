@@ -25,7 +25,7 @@ class Controller
 
 	/**
 	 * @param String function name
-	 * @param Array parameters [0] controller name [1] function to call [2..] agruments
+	 * @param Array of parameter 
 	 */
 	public function start($function, $params)
 	{

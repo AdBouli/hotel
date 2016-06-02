@@ -22,6 +22,8 @@ trait Access
 	}
 	
 	/**
+	 * Check if the current user avec the right to access at this action
+	 * @param String action Function name
 	 * @return Boolean
 	 */
 	public function checkAccess($action)
